@@ -3,7 +3,7 @@ name: omarchy
 description: >
   REQUIRED for end-user customization of Linux desktop, window manager, or system config.
   Use when editing ~/.config/hypr/, ~/.config/waybar/, ~/.config/walker/,
-  ~/.config/alacritty/, ~/.config/kitty/, ~/.config/ghostty/, ~/.config/mako/,
+  ~/.config/alacritty/, ~/.config/kitty/, ~/.config/ghostty/, ~/.config/wezterm/, ~/.config/mako/,
   or ~/.config/omarchy/. Triggers: Hyprland, window rules, animations, keybindings,
   monitors, gaps, borders, blur, opacity, waybar, walker, terminal config, themes,
   wallpaper, night light, idle, lock screen, screenshots, layer rules, workspace
@@ -24,7 +24,7 @@ It is not for contributing to Omarchy source code.
 
 - Editing ANY file in `~/.config/hypr/` (window rules, animations, keybindings, monitors, etc.)
 - Editing ANY file in `~/.config/waybar/`, `~/.config/walker/`, `~/.config/mako/`
-- Editing terminal configs (alacritty, kitty, ghostty)
+- Editing terminal configs (alacritty, kitty, ghostty, wezterm)
 - Editing ANY file in `~/.config/omarchy/`
 - Window behavior, animations, opacity, blur, gaps, borders
 - Layer rules, workspace settings, display/monitor configuration
@@ -78,7 +78,7 @@ Omarchy is built on:
 | **Hyprland** | Wayland compositor/WM | `~/.config/hypr/` |
 | **Waybar** | Status bar | `~/.config/waybar/` |
 | **Walker** | App launcher | `~/.config/walker/` |
-| **Alacritty/Kitty/Ghostty** | Terminals | `~/.config/<terminal>/` |
+| **Alacritty/Kitty/Ghostty/WezTerm** | Terminals | `~/.config/<terminal>/` |
 | **Mako** | Notifications | `~/.config/mako/` |
 | **SwayOSD** | On-screen display | `~/.config/swayosd/` |
 
@@ -154,6 +154,7 @@ cat $(which omarchy-theme-set)
 ~/.config/alacritty/alacritty.toml
 ~/.config/kitty/kitty.conf
 ~/.config/ghostty/config
+~/.config/wezterm/wezterm.lua
 ```
 
 **Command:** `omarchy-restart-terminal`
