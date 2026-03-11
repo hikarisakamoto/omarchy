@@ -12,7 +12,10 @@ desktop_override=""
 
 # Map package name to desktop entry ID
 case "$package" in
-alacritty) desktop_id="Alacritty.desktop" ;;
+alacritty)
+  desktop_id="Alacritty.desktop"
+  desktop_override="Alacritty.desktop"
+  ;;
 ghostty) desktop_id="com.mitchellh.ghostty.desktop" ;;
 kitty) desktop_id="kitty.desktop" ;;
 wezterm)
@@ -24,10 +27,6 @@ wezterm)
   exit 1
   ;;
 esac
-
-if [[ $package == "alacritty" ]]; then
-  desktop_override="Alacritty.desktop"
-fi
 
 # Install package
 if omarchy-pkg-add $package; then

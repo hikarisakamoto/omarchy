@@ -47,9 +47,9 @@ for m in $(hyprctl monitors -j | jq -r '.[] | .name'); do
     ;;
   *wezterm*)
     hyprctl dispatch exec -- \
-      wezterm start \
+      wezterm --config-file ~/.local/share/omarchy/default/wezterm/screensaver.lua \
+      start \
       --class=org.omarchy.screensaver \
-      --config-file ~/.local/share/omarchy/default/wezterm/screensaver.lua \
       -e omarchy-cmd-screensaver
     ;;
   *)
